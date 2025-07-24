@@ -31,9 +31,14 @@ ALLOWED_HOSTS = [
     '127.0.0.1'
 ]
 
+# Railway uchun zarur sozlamalar
 CSRF_TRUSTED_ORIGINS = [
-    "https://instagram-free.up.railway.app",
+    "https://instagram-free.up.railway.app"
 ]
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 
 

