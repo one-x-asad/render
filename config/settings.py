@@ -26,11 +26,11 @@ SECRET_KEY = 'django-insecure--(t@2ypn+6f8!-_3jf+14!#q5uofcoqvqnt=cogw8*#2vw(k!(
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'instagram-production-7c3a.up.railway.app',  # Railway domeningiz
-    'instagram-afpx.onrender.com',              # Render domeni (kerak bo‘lsa)
+    'instagram-free.up.railway.app',  # ✅ Railway domeningiz
     'localhost',
     '127.0.0.1'
 ]
+
 
 
 
